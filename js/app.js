@@ -24,29 +24,34 @@ app.controller('SubmitMovieController', function ($scope, MovieService) {
         let newMovie = {
             name: $scope.name,
             release: $scope.release,
-            genre: $scope.genre
+            genre: $scope.genre,
+            liked: 'not yet liked',
         };
 
         MovieService.addMovie(newMovie);
         $scope.name = '';
         $scope.release = '';
         $scope.genre = '';
-    
+
     };
 
 });
 
 
 app.controller('ListOfMoviesController', function ($scope, MovieService) {
-   
+
     $scope.movies = MovieService.getMovies();
 
-    $scope.likeMovie = function () {
+    $scope.likeMovie = function (film) {
         console.log('liked it');
+        film.liked = 'Good Movie';
+
+
     };
 
-    $scope.noLikeMovie = function () {
+    $scope.noLikeMovie = function (film) {
         console.log('no likey');
+        film.liked = 'Unwatchable Movie';
     };
 
 });

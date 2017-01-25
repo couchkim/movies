@@ -25,10 +25,11 @@
 
         <ul>
             <li ng-repeat="newMovie in movies">
-                {{ newMovie.name }} was released {{ newMovie.release }}.  Genre: {{ newMovie.genre }}
-                    <button id="like" ng-click="likeMovie()">Like</button>
-                    <button id="noLike" ng-click="noLikeMovie()"> No Like</button>
-
+                {{ newMovie.name }} Released:  {{ newMovie.release }}  Genre: {{ newMovie.genre }}
+                {{ newMovie.liked }}
+                    <button id="like" ng-click="likeMovie(newMovie)">Like</button>
+                    <button id="noLike" ng-click="noLikeMovie(newMovie)"> No Like</button>
+  
             </li>
     </section>
 </body>
