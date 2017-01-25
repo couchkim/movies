@@ -21,7 +21,12 @@ app.controller('SubmitMovieController', function ($scope, MovieService) {
 
 
     $scope.submitMovie = function () {
-        let newMovie = [$scope.name, $scope.release, $scope.genre];
+        let newMovie = {
+            name: $scope.name,
+            release: $scope.release,
+            genre: $scope.genre
+        };
+
         MovieService.addMovie(newMovie);
         $scope.name = '';
         $scope.release = '';
