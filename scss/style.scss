@@ -1,0 +1,11 @@
+/*we use ../ because we created a folder for scss.  need to go up a directory*/
+
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+body{
+    background-color: mediumpurple;
+}

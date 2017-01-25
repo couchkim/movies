@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src='app.js'></script>
+</head>
+
+<body ng-app="MoviesApp">
+    <h1>My Movie List</h1>
+    <section ng-controller="SubmitMovieController">
+        
+        <input type="text" id="name" ng-model="name" placeholder="Movie">
+        <input type="text" id="release" ng-model="release" placeholder="Release Date">
+        <input type="text" id="genre" ng-model="genre" placeholder="Genre">
+        <button id="submit" ng-click="submitMovie()">Submit Movie</button>
+    </section>
+
+    <section ng-controller="ListOfMoviesController">
+        <p>Rate My Movies</p>
+
+        <ul>
+            <li ng-repeat="movie in movies">
+                < {{ movie }}}>
+                    <button id="like" ng-click="likeMovie()">Like</button>
+                    <button id="noLike" ng-click="noLikeMovie()"> No Like</button>
+
+            </li>
+    </section>
+</body>
+
+</html>
