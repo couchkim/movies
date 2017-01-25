@@ -7,5 +7,32 @@
 
 
 body{
-    background-color: mediumpurple;
+    background-color: olivedrab;
+    font-family:'Lato', sans-serif;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+
+}
+
+button{
+    // @include button;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15%;
+    background-color: grey;
+    color: black;
+    margin: 5px;
+}
+
+ul{
+    list-style: none;
+
+}
+
+li{
+    margin-left: none;
+    font-size: 1.5em;
 }
