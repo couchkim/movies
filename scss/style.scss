@@ -7,8 +7,14 @@
 
 
 body{
-    background-color: olivedrab;
+    background-color: lightgoldenrodyellow;
     font-family:'Lato', sans-serif;
+}
+
+h1, h2{
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
 }
 
 input{
@@ -25,25 +31,45 @@ input{
     background-color: grey;
     color: black;
     margin: 5px;
-}
+};
 
-#like, #noLike{
+#like, {
     // @include button;
     padding: 5px;
     border: 1px solid black;
     border-radius: 15%;
-    background-color: grey;
+    background-color: darkgreen;
     color: black;
     margin: 5px;
-    font-size: .5em;
-}
+};
+
+#noLike{
+ padding: 5px;
+    border: 1px solid black;
+    border-radius: 15%;
+    background-color: red;
+    color: black;
+    margin: 5px;
+};
 
 ul{
     list-style: none;
 
-}
+};
 
 li{
     margin-left: none;
-    font-size: 1.5em;
-}
+    
+
+    h3{
+        font-size: 1.5em;
+        margin:0;
+    };
+};
+
+p{
+    font-size: 1em;
+    margin: 0;
+    color: darkblue;
+
+};

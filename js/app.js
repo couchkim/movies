@@ -25,7 +25,7 @@ app.controller('SubmitMovieController', function ($scope, MovieService) {
             name: $scope.name,
             release: $scope.release,
             genre: $scope.genre,
-            liked: 'not yet liked',
+            liked: '',
         };
 
         MovieService.addMovie(newMovie);
