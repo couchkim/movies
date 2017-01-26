@@ -5,6 +5,7 @@
 <head>
     <title>Movies</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <script src="https://use.fontawesome.com/7fb1b7bdac.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
@@ -12,31 +13,38 @@
 </head>
 
 <body ng-app="MoviesApp">
-    <h1>My Movie List</h1>
-    <section ng-controller="SubmitMovieController">
-        
-        <input type="text" id="name" ng-model="name" placeholder="Movie">
-        <input type="text" id="release" ng-model="release" placeholder="Release Date">
-        <input type="text" id="genre" ng-model="genre" placeholder="Genre">
-        <button id="submit" ng-click="submitMovie()">Submit Movie</button>
-    </section>
 
-    <section ng-controller="ListOfMoviesController">
-        <h2>Rate My Movies</h2>
+    <main>
+        <h1>My Movie List</h1>
+        <section ng-controller="SubmitMovieController">
 
-        <ul>
-            <li ng-repeat="newMovie in movies">
-                <h3>{{ newMovie.name }} </h3>
-                <p>Released:  {{ newMovie.release }}</p>
-                <p>Genre: {{ newMovie.genre }}</p>
-                <p>{{ newMovie.liked }}</p>
-                    <!--<button id="like" ng-click="likeMovie(newMovie)">Like</button>
-                    <button id="noLike" ng-click="noLikeMovie(newMovie)"> No Like</button>-->
-                    <button id="like" ng-click="likeMovie(newMovie)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-                    <button id="noLike" ng-click="noLikeMovie(newMovie)"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
-  
-            </li>
-    </section>
+            <input type="text" id="name" ng-model="name" placeholder="Movie">
+            <input type="text" id="release" ng-model="release" placeholder="Release Date">
+            <input type="text" id="genre" ng-model="genre" placeholder="Genre">
+            <button id="submit" ng-click="submitMovie()">Submit Movie</button>
+        </section>
+
+        <section ng-controller="ListOfMoviesController">
+            <h2>Rate My Movies</h2>
+
+            <ul>
+                <li ng-repeat="newMovie in movies">
+                    <h3>{{ newMovie.name }} </h3>
+                    <p>Released: {{ newMovie.release }}</p>
+                    <p>Genre: {{ newMovie.genre }}</p>
+                    <p>{{ newMovie.liked }}</p>
+            
+                    <!--<button id="like" ng-click="likeMovie(newMovie)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                    <button id="noLike" ng-click="noLikeMovie(newMovie)"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>-->
+                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+
+                </li>
+        </section>
+    </main>
 </body>
 
 </html>

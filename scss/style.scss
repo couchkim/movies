@@ -7,29 +7,46 @@
 
 
 body{
-    background-color: lightgoldenrodyellow;
-    font-family:'Lato', sans-serif;
+    background-color: #BEC5AD;
+    // font-family:'Lato', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    color: #34252F;
+    @include grid-row();
+}
+
+main{
+    @include grid-column(12);
+    width: 90%;
+    background-color: #3B5249;
+    border: 2px solid #34252F;
+    color: #34252F;
+    border-radius: 5px;
 }
 
 h1, h2{
-    background-color: lightblue;
+    background-color: #519872;
     padding: 10px;
+    border-radius: 5px;
     text-align: center;
 }
 
 input{
     padding: 10px;
     margin: 10px;
+    background-color: #519872;
+    color: #34252F;
+    font-family: 'Orbitron', sans-serif;
 
 }
 
 #submit{
     // @include button;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #34252F;
     border-radius: 15%;
-    background-color: grey;
-    color: black;
+    background-color: #A4B494;
+    color: #34252F;
+    font-family: 'Orbitron', sans-serif;
     margin: 5px;
 };
 
@@ -52,6 +69,12 @@ input{
     margin: 5px;
 };
 
+#star1{
+    background-color: #519872;
+    padding: 5px;
+    
+}
+
 ul{
     list-style: none;
 
@@ -62,14 +85,15 @@ li{
     
 
     h3{
-        font-size: 1.5em;
+        font-size: 2em;
+        font-weight: bold;
         margin:0;
     };
 };
 
 p{
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 0;
-    color: darkblue;
+    color: #34252F;
 
 };
