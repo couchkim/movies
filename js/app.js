@@ -1,9 +1,10 @@
 const app = angular.module('MoviesApp', []);
 // constructor to create new movies
 
-function Movie(name, release, genre) {
+function Movie(name, release, poster) {
     this.name = name;
     this.release = release;
+    this.poster = poster;
     this.genre = genre;
     this.liked = '';
 
@@ -17,9 +18,9 @@ app.factory('MovieService', function ($http) {
     
         $http.get("https://api.themoviedb.org/3/discover/movie?page=1&include_video=false&include_adult=false&sort_by=popularity.desc&language=en-US&api_key=cbb32409948b71c890e365ef60a341c1").then(function (response){
         console.log(response);
-        let profile = [response.data.results.title, response.data.results.release_date, 'comedy'];
-        console.log(profile);
-        angular.copy(profile, movies);
+        // let profile = [response.data.results.title, response.data.results.release_date, response.data.results.poster_path];
+        // console.log(profile);
+        angular.copy(response.data.results, movies);
         
 
         

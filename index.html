@@ -29,9 +29,10 @@
 
             <ul>
                 <li ng-repeat="newMovie in movies">
-                    <h3>{{ newMovie.name }} </h3>
-                    <p>Released: {{ newMovie.release }}</p>
-                    <p>Genre: {{ newMovie.genre }}</p>
+                    <h3>{{ newMovie.title }} </h3>
+                    <img ng-src=" https://image.tmdb.org/t/p/w185_and_h278_bestv2 {{ newMovie.poster_path  }}">
+                    <p>Released: {{ newMovie.release_date }}</p>
+                    <!--<p>Genre: {{ newMovie.genre }}</p>-->
                     <p>{{ newMovie.liked }}</p>
             
                     <!--<button id="like" ng-click="likeMovie(newMovie)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
