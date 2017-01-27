@@ -63,6 +63,7 @@ app.controller("SubmitMovieController", function ($scope, MovieService) {
 app.controller('ListOfMoviesController', function ($scope, MovieService) {
 
     $scope.movies = MovieService.getMovies();
+    console.log($scope.movies);
 
     $scope.likeMovie = function (film) {
         console.log('liked it');
