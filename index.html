@@ -18,9 +18,9 @@
         <h1>My Movie List</h1>
         <section ng-controller="SubmitMovieController">
 
-            <input type="text" id="name" ng-model="name" placeholder="Movie">
-            <input type="text" id="release" ng-model="release" placeholder="Release Date">
-            <input type="text" id="genre" ng-model="genre" placeholder="Genre">
+            <input type="text" id="name" ng-model="title" placeholder="Movie">
+            <input type="text" id="release" ng-model="release_date" placeholder="Release Date">
+            <input type="text" id="genre" ng-model="overview" placeholder="Overview">
             <button id="submit" ng-click="submitMovie()">Submit Movie</button>
         </section>
 

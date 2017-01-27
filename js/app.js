@@ -55,19 +55,21 @@ app.factory('MovieService', function ($http) {
 
 app.controller("SubmitMovieController", function ($scope, MovieService) {
 
-    $scope.name = '';
-    $scope.release = '';
-    $scope.genre = '';
+    $scope.title = '';
+    $scope.release_date = '';
+    $scope.poster_path = '';
+    $scope.overview = '';
 
     $scope.submitMovie = function () {
 
-        const brandNewMovie = new Movie($scope.name, $scope.release, $scope.genre);
+        const brandNewMovie = new Movie($scope.title, $scope.release_date, $scope.poster_path, $scope.overview);
 
         MovieService.addMovie(brandNewMovie);
         // clearing the DOM
-        $scope.name = '';
-        $scope.release = '';
-        $scope.genre = '';
+        $scope.title = '';
+        $scope.release_date = '';
+        $scope.poster_path = '';
+        $scope.overview = '';
 
     };
 
