@@ -50,26 +50,9 @@ input{
     margin: 5px;
 };
 
-#like, {
-    // @include button;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 15%;
-    background-color: darkgreen;
-    color: black;
-    margin: 5px;
-};
 
-#noLike{
- padding: 5px;
-    border: 1px solid black;
-    border-radius: 15%;
-    background-color: red;
-    color: black;
-    margin: 5px;
-};
 
-#star1{
+.star1, .star2, .star3, .star4, .star5{
     background-color: #519872;
     padding: 5px;
     
@@ -77,11 +60,16 @@ input{
 
 ul{
     list-style: none;
+    padding-left: 0;
+    @include grid-row();
 
 };
 
 li{
-    margin-left: none;
+   
+    @include grid-column(12);
+    border: 2px solid #34252F;
+
     
 
     h3{
@@ -98,6 +86,39 @@ p{
 
 };
 
-img{
-    display: inline-block;
+
+
+li #title{
+
+    @include grid-row();
 }
+
+
+   li #info{
+    
+        @include grid-column(8);
+       
+       #overview{
+            margin: 20px;
+            font-size: 1em;
+       } 
+
+       #date{
+           margin: 20px;
+            font-size: 1em;
+
+       }
+
+       #buttons{
+           margin: 20px;
+       }
+    }
+
+   li img{
+      @include grid-column(4);
+      width: 250px;
+      margin: 10px;
+    }
+
+
+

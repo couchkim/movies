@@ -1,15 +1,15 @@
 const app = angular.module('MoviesApp', []);
 // constructor to create new movies
 
-function Movie(name, release, poster) {
-    this.name = name;
-    this.release = release;
-    this.poster = poster;
-    this.genre = genre;
-    this.liked = '';
+// function Movie(name, release, poster) {
+//     this.name = name;
+//     this.release = release;
+//     this.poster = poster;
+//     this.genre = genre;
+//     this.liked = '';
 
-    return this;
-}
+//     return this;
+// }
 
 app.factory('MovieService', function ($http) {
     let movies = [];
@@ -35,6 +35,15 @@ app.factory('MovieService', function ($http) {
         getMovies() {
             return movies;
         },
+
+        // isRated(){
+
+        // },
+
+        setRating(film, number){
+            film.stars = number;
+            film.isRated = true;
+        }
 
     };
 });

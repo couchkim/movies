@@ -29,20 +29,23 @@
 
             <ul>
                 <li ng-repeat="newMovie in movies">
-                    <h3>{{ newMovie.title }} </h3>
-                    <img ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ newMovie.poster_path }}">
-                    <p>Released: {{ newMovie.release_date }}</p>
-                    <!--<p>Genre: {{ newMovie.genre }}</p>-->
-                    <p>{{ newMovie.liked }}</p>
-            
+                    <h3 id="title">{{ newMovie.title }} </h3>
+                    <img ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ newMovie.poster_path }}" />
+                    <div id="info">
+                        <p id="overview"> {{newMovie.overview }}</p>
+                        <p id="date">Released: {{ newMovie.release_date }}</p>
+                        <div id="buttons">
+                            <button class="star1" ng-click = "setRating(newMovie, 1)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star2" ng-click = "setRating(newMovie, 2)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star3" ng-click = "setRating(newMovie, 3)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star4" ng-click = "setRating(newMovie, 4)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star5" ng-click = "setRating(newMovie, 5)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <p ng-show "newMovie.isRated"> You rated {{ newMovie.title}} {{ newMovie.stars }} stars.</p>
+                        </div>
+                    </div>
+
                     <!--<button id="like" ng-click="likeMovie(newMovie)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
                     <button id="noLike" ng-click="noLikeMovie(newMovie)"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>-->
-                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                    <button id = "star1"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-
                 </li>
         </section>
     </main>
