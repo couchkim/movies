@@ -35,12 +35,12 @@
                         <p id="overview"> {{newMovie.overview }}</p>
                         <p id="date">Released: {{ newMovie.release_date }}</p>
                         <div id="buttons">
-                            <button class="star1" ng-click = "setRating(newMovie, 1)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                            <button class="star2" ng-click = "setRating(newMovie, 2)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                            <button class="star3" ng-click = "setRating(newMovie, 3)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                            <button class="star4" ng-click = "setRating(newMovie, 4)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                            <button class="star5" ng-click = "setRating(newMovie, 5)" ng-hide "newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
-                            <p ng-show "newMovie.isRated"> You rated {{ newMovie.title}} {{ newMovie.stars }} stars.</p>
+                            <button class="star1" ng-click = "setRating(newMovie, 1)" ng-hide ="newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star2" ng-click = "setRating(newMovie, 2)" ng-hide ="newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star3" ng-click = "setRating(newMovie, 3)" ng-hide ="newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star4" ng-click = "setRating(newMovie, 4)" ng-hide ="newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <button class="star5" ng-click = "setRating(newMovie, 5)" ng-hide ="newMovie.isRated"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></button>
+                            <p ng-show= "newMovie.isRated"> You rated {{ newMovie.title}} {{ newMovie.stars }} stars.</p>
                         </div>
                     </div>
 
